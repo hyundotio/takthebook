@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136110202-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-136110202-1');
+    </script>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+     <meta charset="UTF-8">
+     <meta property=”og:title” content="тaк... Chernobyl Photo Log" />
+     <meta property=”og:url” content=”http://www.takthebook.com” />
+     <meta property="og:image" content="http://www.takthebook.com/assets/op.jpg" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+     <meta property=”og:description” content="Part travelogue, part memoir, and part visual poem, тaк... showcases a young man's journey through the Chernobyl exclusion zone in the winter of 2018." />
+    <title>тaк... Chernobyl Photo Log</title>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css"/>
+    <script src="./required/jquery.min.js"></script>
+  </head>
+  <body>
+    <a class="play-bandit-radio" id="anu-cheeki-breeki-iv-damke"><img src="./assets/bandit.jpg"/></a>
+    <audio class="bandit-radio" src="./assets/bandit.mp3"></audio>
+    <div class="video-bg">
+      <div class="video-filter-bg"></div>
+      <div class="video-filter"></div>
+      <video autoplay loop muted playsinline poster="./assets/videobg.jpg" class="fullscreen-bg-video">
+          <source src="./assets/videobg.webm" type="video/webm">
+          <source src="./assets/videobg.mp4" type="video/mp4">
+      </video>
+    </div>
+    <main>
+
+      <nav>
+        <ul class="links-ul">
+          <li><a href="#" class="buy" target="_blank">Softcover</a></li>
+          <li><a href="https://photos.app.goo.gl/UhnGKGKckgENgSrU7" target="_blank">Photo Album</a></li>
+          <li><a href="#" class="open-author">Author</a></li>
+          <li class="ig"><a href="https://www.instagram.com/takthebook/" target="_blank"><img src="./assets/iglogo.png"/></a></li>
+        </ul>
+      </nav>
+      <section class="content">
+        <section class="book">
+        <h1>тaк...</h1>
+        <h2>Chernobyl Photo Log</h2>
+        <p>Part travelogue, part memoir, and part visual poem, тaк... showcases a young man's journey through the Chernobyl exclusion zone in the winter of 2018. This book is a an appreciation of the beauty left behind in the wake of the biggest nuclear disaster in human history.</p>
+      </section>
+      <section class="author hidden">
+        <a class="author-hide" href="#">hide</a>
+        <h2>author / hyun seo</h2>
+        <img src="./assets/author.jpg"/>
+
+      <div class="author-bio">
+                <p>I was born in South Korea, but my heart is probably
+        somewhere in Eastern Europe. My love affair with the
+        region started back in high school when I took Russian
+        for my language requirement. After I played the video
+        game S.T.A.L.K.E.R.: Shadow of Chernobyl, I was
+        fascinated by the nuclear disaster’s tragic history and
+        had to learn as much as I could about it. I decided
+        I was going to see the zone for myself one day.
+        </p>
+        <p>
+        My other interests include all things tech—I hold
+        patents in artificial intelligence, robotics, cyber-security,
+        and quantum computing. More importantly, I hacked
+        through my first firewall in middle school so I could
+        mess around on Myspace and YouTube. If any of my
+        old teachers are reading this, I’m sorry. A little.
+        </p>
+        <p>
+        I live in Austin and work at IBM Research. I’ve hosted
+        popular workshops at SXSW and have been interviewed
+        by publications such as The Daily Dot and USA Today.</p>
+        </div>
+        <div class="author-links">
+          <ul class="links-ul">
+            <li><a href="https://www.hyun.io" target="_blank">Website</a></li>
+          <li><a href="mailto:hi@hyun.io">Email</a></li>
+          </ul>
+        </div>
+      </section>
+      </section>
+    </main>
+  </body>
+  <script>
+    $('.play-bandit-radio').bind('click',function(e){
+      e.preventDefault();
+      if($(this).hasClass('active')){
+        $(this).removeClass('active');
+        $('.bandit-radio')[0].pause();
+        $('.bandit-radio')[0].currentTime = 0;
+      } else {
+        $(this).addClass('active');
+        $('.bandit-radio')[0].play();
+      }
+    })
+    $('.buy').bind('click',function(e){
+      e.preventDefault();
+      alert('Book is not out yet. Please check back around end of March!');
+    })
+    $('.open-author').bind('click',function(e){
+      e.preventDefault();
+      if($('.author').hasClass('hidden')){
+        $('.author').removeClass('hidden');
+      } else {
+        $('.author').addClass('hidden');
+      }
+    })
+    $('.author-hide').bind('click',function(e){
+      e.preventDefault();
+      $('.author').addClass('hidden');
+    })
+  </script>
+</html>

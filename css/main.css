@@ -1,0 +1,259 @@
+html {
+  background-color:#000;
+}
+.video-bg{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    object-fit: cover;
+}
+.video-filter-bg {
+  position:absolute;
+  background-color:#000;
+  opacity:0.66;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  z-index:3;
+}
+.video-filter {
+  position:absolute;
+  background:url(
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAEElEQVQImWNgYGD4zzDYAACSBAEA8yPpMwAAAABJRU5ErkJggg==
+  ) repeat;
+  opacity:0.75;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  z-index:2;
+}
+body {
+  padding:1em 2em;
+  margin:0;
+  font-size:1em;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom:3em;
+  line-height:1.5em;
+  color:#FFF;
+}
+.content {
+  margin-top:1em;
+}
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+}
+h1,h2,h3 {
+  padding:0;
+  margin:0;
+  font-weight:inherit;
+}
+h1 {
+  font-size:2.25em;
+  margin-bottom:0.175em;
+}
+h2 {
+  font-size:1em;
+  margin-bottom:0.66em;
+}
+h3 {
+  font-size:1em;
+  margin-bottom:1em;
+}
+ul, li {
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+nav {
+  line-height:1em;
+  z-index: 1;
+  position:fixed;
+  width:100%;
+  bottom:0;
+  height:3em;
+  box-sizing:border-box;
+  background-color:#000;
+  left:0;
+  padding:1em 2em;
+}
+a {
+  color:inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  opacity:0.66;
+}
+nav ul {
+
+}
+.links-ul li {
+  display:inline-block;
+  margin-right:1.5em;
+}
+.author {
+  padding-top: 1.25em;
+    margin-top: 1em;
+    border-top: 1px solid #eee;
+}
+.author-links ul {
+  clear:both;
+  height:44px;
+}
+.author-links li {
+  float:left;
+  margin-right:1px;
+}
+.author-links a,.author-links a:hover {
+  line-height:16px;
+  font-size:14px;
+  font-weight: normal;
+  overflow:hidden;
+  padding-top:14px;
+  padding-left:14px;
+  box-sizing:border-box;
+  background-color:#000;
+  color:#fff;
+  height:44px;
+  width:112px;
+  display:block;
+  float:left;
+}
+.author img {
+  width:100%;
+  max-width:14em;
+}
+.author-hide {
+  position:absolute;
+  right:0;
+}
+.play-bandit-radio:hover {
+  opacity:1;
+}
+.play-bandit-radio {
+  cursor:pointer;
+  position:absolute;
+  right:2em;
+  top:2.5em;
+  opacity:0.6;
+  z-index:9;
+}
+.play-bandit-radio img:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%)
+}
+.play-bandit-radio img{
+  border-radius:2px;
+  height:0.75em;
+  width:0.75em;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.play-bandit-radio.active {
+  opacity:1;
+}
+nav ul li a {
+
+}
+.content {
+  position:relative;
+  max-width:24em;
+  box-sizing:border-box;
+  padding-bottom:3em;
+}
+p {
+  font-size:0.75em;
+  line-height:1.75em;
+  padding-right:2em;
+}
+.hidden {
+  display:none;
+}
+li.ig {
+  margin:0;
+  float:right;
+  position: relative;
+  top: -0.5em;
+}
+.ig a {
+
+  width:2em;
+  height:2em;
+  display:block;
+  position:relative;
+}
+.ig img {
+  width:100%;
+  height:100%;
+  position:absolute;
+}
+@media only screen and (min-width: 1023px) {
+  html {
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  html {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .content {
+  }
+  .play-bandit-radio {
+    right:1em;
+  }
+  nav {
+    padding:1em;
+  }
+  body{
+    padding:1em;
+  }
+}
+@media only screen and (max-width:440px) {
+  .content {
+    padding-bottom:2em;
+  }
+  nav {
+    height:4em;
+    padding:1.5em 1em;
+    font-size:0.75em;
+  }
+  .author-links ul {
+    width:100%;
+    clear:both;
+    margin-bottom:1em;
+  }
+  .author-links li:first-of-type {
+    border-right:1px solid transparent;
+    box-sizing:border-box;
+  }
+  .author-links li {
+    width:50%;
+    margin:0;
+  }
+  .author-links a,.author-links a:hover {
+    width:100%;
+    font-size:12px;
+    padding-top:14px;
+  }
+  p {
+    line-height:1.5em;
+  }
+  body {
+    font-size:1em;
+  }
+}
